@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+header{
+    background-color: #EAB646;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 3%;
+}
+.logo-header{
+    margin-left: 5%;
+    width: 5%;
+    height: auto;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #7f6424;
+}
+.carrinho{
+    width: 5%;
+}
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #EAB646;
+}
+.logo-pretoEbranco{
+    width: 4%;
+}
+.redes-sociais{
+    width: 15%;
+    margin: auto;
+    display: flex;
+
+}
+.itens-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-byron-preta{
+    width: 15%;
+    height: 15%;
+}
+.desenvolvido-por{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+.desenvolvido-por p{
+    margin-right: 2%;
+    font-size: 80%;
+}
