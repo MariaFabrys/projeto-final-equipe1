@@ -9,6 +9,8 @@ header{
     height: auto;
     display: flex;
     justify-content: space-between;
+
+
 }
 
 nav{
@@ -21,22 +23,24 @@ nav{
 .logo-header{
     margin-left: 5%;
     width: 5%;
-    height: auto;
+    height: 5%;
 }
 nav a{
     color: black;
     text-decoration: none;
+    margin-left:  11%;
 }
 nav a:hover{
     color: #7f6424;
 }
 .carrinho{
-    width: 5%;
+    width: 24%
 }
 footer{
     width: 100%;
     height: auto;
     background-color: #EAB646;
+    margin-top: auto;
 }
 .logo-pretoEbranco{
     width: 4%;
@@ -68,4 +72,65 @@ footer{
 .desenvolvido-por p{
     margin-right: 2%;
     font-size: 80%;
+}
+
+/*Mobile*/
+@media (max-width: 768px) {
+    header{
+
+        background-color: #EAB646;
+        width: 100%;
+        height: 8%;
+        display: flex;
+        position: fixed;
+        bottom: 0;
+    }
+    .icon-mobile{
+        width: 40%;
+        margin-bottom: -6%;
+
+    }
+    .logo-header{
+        display: none;
+    }
+        
+    nav{
+        margin-top: 3%;
+        margin-right: 11%;
+
+        
+    }
+    .nav-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .carrinho{
+        width: 60%;
+    }
+    footer{
+        padding-bottom: 30%;
+    }
+    .logo-pretoEbranco{
+        width: 10%;
+    }
+    .redes-sociais{
+        width: 20%;
+    }
+    .logo-byron-preta{
+        width: 20%;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-mobile {
+        display: none; 
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none; 
+    }
 }

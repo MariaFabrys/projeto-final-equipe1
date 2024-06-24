@@ -12,13 +12,32 @@
 <body>
     <header>
         <img src="./img/WhatsApp_Image_2024-06-22_at_13.53.43-removebg-preview.png" alt="logo" class="logo-header">
-        <nav>
-            <a href="index.html"><li>Home</li></a>
-            <a href="cardapio.html"><li>Cardápio</li></a>
-            <a href="#footer"><li>Contatos</li></a>
-            <img src="./img/cart-shopping-solid (1).svg" alt="carrinho" class="carrinho">
+        <nav class="navbar">
+            <a href="index.html" class="nav-desktop">Home</a>
+
+            <a href="index.html" class="nav-mobile">
+                <img src="img/home-mobile.png" alt="icon-home-mobile" class="icon-mobile home-icon">
+                <p>Home</p>
+            </a>
+
+            <a href="cardapio.html" class="nav-desktop">Cardápio</a>
+
+            <a href="cardapio.html" class="nav-mobile">
+                <img src="/img/burguer-mobile.png" alt="hamburguer" class="icon-mobile cardapio-icon">
+                <p>Cardápio</p>
+            </a>
+            <a href="#footer" class="nav-desktop">Contatos</a>
+            <a href="#footer" class="nav-mobile">
+                <img src="img/phone-call-mobile.png" alt="contato" class="icon-mobile contato-icon">
+                <p>Contatos</p>
+            </a>
+            <a href="#">
+                <img src="./img/cart-shopping-solid (1).svg" alt="carrinho" class="carrinho">
+                <p class="nav-mobile">Carrinho</p>
+            </a>
         </nav>
     </header>
+    
     <section id="cardapio">
         <article class="titulo-pagina">
             <h1>Cardápio</h1>
