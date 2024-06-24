@@ -21,14 +21,14 @@ body {
     margin-bottom: 10px;
 }
 
-.lista-lanche {
+.lista-itens {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center; 
 }
 
-.card-lanche {
+.cards-itens {
     width: calc(50% - 10px); 
     background-color: white;
     border-radius: 8px;
@@ -37,7 +37,7 @@ body {
     margin-bottom: 20px; 
 }
 
-.card-lanche img {
+.cards-itens img {
     width: 100%;
     height: auto;
     display: block;
@@ -55,7 +55,7 @@ body {
 }
 
 @media (min-width: 769px) {
-    .card-lanche {
+    .cards-itens {
         width: 23%; 
     }
 }
