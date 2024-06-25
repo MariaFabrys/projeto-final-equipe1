@@ -1,62 +1,104 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/style-home.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/style-home.css" />
     <title>Home</title>
+  
 </head>
+
 <body>
     <header>
-        <img src="./img/WhatsApp_Image_2024-06-22_at_13.53.43-removebg-preview.png" alt="logo" class="logo-header">
+        <img src="./img/WhatsApp_Image_2024-06-22_at_13.53.43-removebg-preview.png" alt="logo" class="logo-header" />
         <nav class="navbar">
             <a href="index.html" class="nav-desktop">Home</a>
 
             <a href="index.html" class="nav-mobile">
-                <img src="img/home-mobile.png" alt="icon-home-mobile" class="icon-mobile home-icon">
+                <img src="img/home-mobile.png" alt="icon-home-mobile" class="icon-mobile home-icon" />
                 <p>Home</p>
             </a>
 
             <a href="cardapio.html" class="nav-desktop">Cardápio</a>
 
             <a href="cardapio.html" class="nav-mobile">
-                <img src="/img/burguer-mobile.png" alt="hamburguer" class="icon-mobile cardapio-icon">
+                <img src="/img/burguer-mobile.png" alt="hamburguer" class="icon-mobile cardapio-icon" />
                 <p>Cardápio</p>
             </a>
+
             <a href="#footer" class="nav-desktop">Contatos</a>
             <a href="#footer" class="nav-mobile">
-                <img src="img/phone-call-mobile.png" alt="contato" class="icon-mobile contato-icon">
+                <img src="img/phone-call-mobile.png" alt="contato" class="icon-mobile contato-icon" />
                 <p>Contatos</p>
             </a>
+
             <a href="#">
-                <img src="./img/cart-shopping-solid (1).svg" alt="carrinho" class="carrinho">
+                <img src="./img/cart-shopping-solid (1).svg" alt="carrinho" class="carrinho" />
                 <p class="nav-mobile">Carrinho</p>
             </a>
         </nav>
     </header>
 
+    <main>
+        <section id="pao">
+            <p>ㅤㅤㅤㅤ</p>
+        </section>
 
+        <section id="Home">
+            <img src="/img/Group 2.png" alt="hamburger">
+            <p>Vem com a gente e descubra por que nossos hambúrgueres são irresistivelmente deliciosos em cada bite!"
+            </p>
+        </section>
 
+        <section id="Sobre">
+            <h1>Sobre nós</h1>
+            <p>Bem-vindo à Big Bite, onde transformamos simples hambúrgueres em experiências memoráveis. Nossos chefs
+                talentosos combinam técnicas tradicionais com criatividade para criar verdadeiras obras de arte
+                comestíveis. Cada hambúrguer é preparado com ingredientes frescos e cuidado meticuloso, garantindo
+                sabores únicos a cada visita.</p>
 
+            <p>Além dos hambúrgueres irresistíveis, oferecemos batatas fritas crocantes, onion rings douradas e
+                milkshakes cremosos para complementar sua refeição. Nosso ambiente é acolhedor e descontraído, perfeito
+                para encontros entre amigos ou momentos gourmet.</p>
 
+            <p>descobrir por que somos a escolha preferida dos amantes de hambúrgueres exigentes. Na Big Bite, cada
+                mordida é uma celebração do sabor e da qualidade.</p>
+        </section>
+    </main>
 
     <footer id="footer">
         <div class="itens-footer">
-            <img src="img/big_bite_bw-removebg-preview.png" alt="logo-pretoEbranco" class="logo-pretoEbranco">
+            <img src="img/big_bite_bw-removebg-preview.png" alt="logo-pretoEbranco" class="logo-pretoEbranco" />
             <div class="redes-sociais">
-                <img src="img/instagram (1).svg" alt="instagram" class="redes-sociais instagram">
-                <img src="img/facebook (1).svg" alt="facebook" class="redes-sociais facebook">
-                <img src="img/x-twitter.svg" alt="x-twitter" class="redes-sociais twitter">
+                <img src="img/instagram (1).svg" alt="instagram" class="redes-sociais instagram" />
+                <img src="img/facebook (1).svg" alt="facebook" class="redes-sociais facebook" />
+                <img src="img/x-twitter.svg" alt="x-twitter" class="redes-sociais twitter" />
             </div>
             <p>TM & © 2024 Big Bite Burguer Corporation. Todos os direitos reservados.</p>
             <div class="desenvolvido-por">
                 <p>Desenvolvido por:</p>
-                <img src="img/logo-byron-preta (1).png" alt="logo-byron" class="logo-byron-preta">
+                <img src="img/logo-byron-preta (1).png" alt="logo-byron" class="logo-byron-preta" />
             </div>
         </div>
     </footer>
+    <script>
+        function verificarLargura() {
+            const paoSection = document.getElementById('pao');
+            if (window.innerWidth < 769) {
+                paoSection.style.display = 'block'; 
+            } else {
+                paoSection.style.display = 'none'; 
+            }
+        }
+
+        verificarLargura();
+
+        window.addEventListener('resize', verificarLargura);
+    </script>
+
 </body>
+
 </html>
