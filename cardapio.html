@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style-cardapio.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="js/cardapio.js">
     <title>Document</title>
 </head>
 <body>
@@ -31,9 +30,9 @@
                 <img src="img/phone-call-mobile.png" alt="contato" class="icon-mobile contato-icon">
                 <p>Contatos</p>
             </a>
-            <a href="#">
+            <a href="#" class="a-carrinho">
                 <img src="./img/cart-shopping-solid (1).svg" alt="carrinho" class="carrinho">
-                <p class="nav-mobile">Carrinho</p>
+                <p class="nav-mobile texto-carrinho">Carrinho</p>
             </a>
         </nav>
     </header>
@@ -50,6 +49,11 @@
                     <p>Big Bite Supreme</p>
                     <p>R$ 24,90</p>
                 </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
             </div>
     
             <div class="cards-itens">
@@ -57,6 +61,11 @@
                 <div class="info-lanches">
                     <p>BBQ Beef Bonanza</p>
                     <p>R$ 22,90</p>
+                </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
                 </div>
             </div>
 
@@ -66,6 +75,11 @@
                     <p>Cheesy Jalapeño Joy</p>
                     <p>R$ 23,90</p>
                 </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
             </div>
 
             <div class="cards-itens">
@@ -74,6 +88,11 @@
                     <p>Spicy Sriracha Sensation</p>
                     <p>R$ 27,90</p>
                 </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
             </div>
 
             <div class="cards-itens">
@@ -81,6 +100,11 @@
                 <div class="info-lanches">
                     <p>Crispy Chicken Delight</p>
                     <p>R$ 22,90</p>
+                </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
                 </div>
             </div>
 
@@ -91,6 +115,11 @@
                     <p>Gourmet Bacon Bliss</p>
                     <p>R$ 26,90</p>
                 </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
             </div>
 
             <div class="cards-itens">
@@ -99,6 +128,11 @@
                     <p>Veggie Lover's Paradise</p>
                     <p>R$ 19,90</p>
                 </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
             </div>
 
             <div class="cards-itens">
@@ -106,6 +140,113 @@
                 <div class="info-lanches">
                     <p>cheeseburguer kids</p>
                     <p>R$ 15,90</p>
+                </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
+            </div>
+        </article>
+
+        <article class="titulo-pagina">
+            <h2>Sobremesas:</h2>
+        </article>
+        <article class="lista-itens">
+            <div class="cards-itens">
+                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Casquinha-Baunilha-thumb.png?mtime=20210916162214&focal=none" alt="">
+                <div class="info-lanches">
+                    <p>Casquinha de Baunilha</p>
+                    <p>R$ 5,00</p>
+                </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
+            </div>
+            <div class="cards-itens">
+                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Casquinha-Mista-thumb.png?mtime=20210916162351&focal=none" alt="">
+                <div class="info-lanches">
+                    <p>Casquinha Mista</p>
+                    <p>R$ 5,00</p>
+                </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
+            </div>
+            <div class="cards-itens">
+                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Casquinha-Doce-de-Leite-thumb.png?mtime=20210916162028&focal=none" alt="">
+                <div class="info-lanches">
+                    <p>Casquinha de Chocolate </p>
+                    <p>R$ 5,00</p>
+                </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
+            </div>
+            <div class="cards-itens">
+                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Sundae-Chocolate-thumb.png?mtime=20210916155926&focal=none" alt="">
+                <div class="info-lanches">
+                    <p>Sundae de Chocolate</p>
+                    <p>R$ 8,90</p>
+                </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
+            </div>
+            <div class="cards-itens">
+                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Sundae-Morango-thumb.png?mtime=20210916160333&focal=none" alt="">
+                <div class="info-lanches">
+                    <p>Sundae de Morango</p>
+                    <p>R$ 8,90</p>
+                </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
+            </div>
+            <div class="cards-itens">
+                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Nova-Embalagem_Shake-Chocolate_Externa.png?mtime=20240604104016&focal=none" alt="">
+                <div class="info-lanches">
+                    <p>Shake de Chocolate</p>
+                    <p>R$ 16,90</p>
+                </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
+            </div>
+            <div class="cards-itens">
+                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Nova-Embalagem_Shake-Morango_Externa.png?mtime=20240604104134&focal=none" alt="">
+                <div class="info-lanches">
+                    <p>Shake de Morango</p>
+                    <p>R$ 16,90</p>
+                </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
+            </div>
+            <div class="cards-itens">
+                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/BK-Mix-Ovomaltine-thumb.png?mtime=20210916160844&focal=none" alt="">
+                <div class="info-lanches">
+                    <p>Mix de Ovomaltine</p>
+                    <p>R$ 15,90</p>
+                </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
                 </div>
             </div>
         </article>
@@ -120,12 +261,22 @@
                     <p>H20H! Limão</p>
                     <p>R$ 6,29</p>
                 </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
             </div>
             <div class="cards-itens">
                 <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Natural_One_Laranja_thumb_639x324.png?mtime=20210118103439&focal=none" alt="">
                 <div class="info-lanches">
                     <p>Natural One Laranja</p>
                     <p>R$ 11,60</p>
+                </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
                 </div>
             </div>
             <div class="cards-itens">
@@ -134,12 +285,22 @@
                     <p>Natural One Uva</p>
                     <p>R$ 11,60</p>
                 </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
             </div>
             <div class="cards-itens">
                 <img src="https://d3sn2rlrwxy0ce.cloudfront.net/natural-one-maracuja-thumb_2021-02-24-143713.png?mtime=20210224113714&focal=none" alt="">
                 <div class="info-lanches">
                     <p>Natural One Maracujá</p>
                     <p>R$ 11,60</p>
+                </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
                 </div>
             </div>
             <div class="cards-itens">
@@ -148,6 +309,11 @@
                     <p>Água</p>
                     <p>R$ 3,29</p>
                 </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
             </div>
             <div class="cards-itens">
                 <img src="img/Pepsi-Twist-thumb.png" alt="">
@@ -155,12 +321,22 @@
                     <p>Pepsi Twist</p>
                     <p>R$ 8,90</p>
                 </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
+                </div>
             </div>
             <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/H2O_limao_thumb_639x324-100k.png?mtime=20201222080044&focal=none" alt="">
+                <img src="img/Guarana-thumb_2021-09-20-103342_wuyd.png" alt="">
                 <div class="info-lanches">
-                    <p></p>
-                    <p>R$ 6,29</p>
+                    <p>Guaraná Antarctica</p>
+                    <p>R$ 8,90</p>
+                </div>
+                <div class="counter-container">
+                    <button class="counter-button" id="decrement-button">-</button>
+                    <div id="counter" class="counter-display">0</div>
+                    <button class="counter-button" id="increment-button">+</button>
                 </div>
             </div>
         </article>
@@ -182,5 +358,6 @@
             </div>
         </div>
     </footer>
+    <script src="./js/cardapio.js"></script>
 </body>
 </html>

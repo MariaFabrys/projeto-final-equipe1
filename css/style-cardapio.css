@@ -29,6 +29,9 @@ body {
 }
 
 .cards-itens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: calc(50% - 10px); 
     background-color: white;
     border-radius: 8px;
@@ -54,8 +57,19 @@ body {
     margin: 5px 0;
 }
 
+/*mobile*/
 @media (min-width: 769px) {
     .cards-itens {
         width: 23%; 
     }
+}
+/*Js counter*/
+.counter-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#counter{
+    margin: 18%;
 }

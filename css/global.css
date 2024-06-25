@@ -1,83 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-body{
+
+body {
     font-family: "Montserrat", sans-serif;
 }
 
-header{
+header {
     background-color: #EAB646;
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
-
-
 }
 
-nav{
+nav {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-right: 3%;
 }
-.logo-header{
+
+.logo-header {
     margin-left: 5%;
     width: 5%;
     height: 5%;
 }
-nav a{
+
+nav a {
     color: black;
     text-decoration: none;
-    margin-left:  11%;
+    margin-left: 10%;
 }
-nav a:hover{
+
+nav a:hover {
     color: #7f6424;
 }
-.carrinho{
-    width: 24%
+
+.carrinho {
+    width: 25%;
 }
-footer{
+
+footer {
     width: 100%;
     height: auto;
     background-color: #EAB646;
     margin-top: auto;
 }
-.logo-pretoEbranco{
+
+.logo-pretoEbranco {
     width: 4%;
 }
-.redes-sociais{
+
+.redes-sociais {
     width: 15%;
     margin: auto;
     display: flex;
-
 }
-.itens-footer{
+
+.itens-footer {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.logo-byron-preta{
+
+.logo-byron-preta {
     width: 15%;
     height: 15%;
 }
-.desenvolvido-por{
+
+.desenvolvido-por {
     display: flex;
     margin: auto;
     align-items: center;
     justify-content: center;
-
-
-
 }
-.desenvolvido-por p{
+
+.desenvolvido-por p {
     margin-right: 2%;
     font-size: 80%;
 }
 
-/*Mobile*/
+/* Mobile */
 @media (max-width: 768px) {
-    header{
-
+    header {
         background-color: #EAB646;
         width: 100%;
         height: 8%;
@@ -85,52 +90,76 @@ footer{
         position: fixed;
         bottom: 0;
     }
-    .icon-mobile{
+
+    .icon-mobile {
         width: 40%;
         margin-bottom: -6%;
-
     }
-    .logo-header{
+
+    .logo-header {
         display: none;
     }
-        
-    nav{
+
+    nav {
         margin-top: 3%;
         margin-right: 11%;
-
-        
     }
-    .nav-mobile{
+
+    .nav-mobile {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    .carrinho{
-        width: 60%;
+
+    .carrinho-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
-    footer{
+
+    .carrinho {
+        width: 60%;
+        margin-bottom: 5%;
+    }
+    .a-carrinho{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2%;
+
+    }
+
+    .texto-carrinho {
+        margin: 3%;
+    }
+
+    footer {
         padding-bottom: 30%;
     }
-    .logo-pretoEbranco{
+
+    .logo-pretoEbranco {
         width: 10%;
     }
-    .redes-sociais{
+
+    .redes-sociais {
         width: 20%;
     }
-    .logo-byron-preta{
+
+    .logo-byron-preta {
         width: 20%;
     }
 }
 
 @media (min-width: 769px) {
     .nav-mobile {
-        display: none; 
+        display: none;
     }
 }
 
 @media (max-width: 768px) {
     .nav-desktop {
-        display: none; 
+        display: none;
     }
 }
