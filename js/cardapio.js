@@ -1,13 +1,16 @@
 // Função para incrementar o contador
-function incrementar() {
-    const counterDisplay = document.getElementById("counter");
+function incrementar(event) {
+    const button = event.target;
+    const counterDisplay = button.parentElement.querySelector(".counter");
     let valorAtual = parseInt(counterDisplay.textContent);
     valorAtual++;
     counterDisplay.textContent = valorAtual;
 }
 
-function decremento() {
-    const counterDisplay = document.getElementById("counter");
+// Função para decrementar o contador
+function decrementar(event) {
+    const button = event.target;
+    const counterDisplay = button.parentElement.querySelector(".counter");
     let valorAtual = parseInt(counterDisplay.textContent);
     if (valorAtual > 0) {
         valorAtual--;
@@ -15,17 +18,16 @@ function decremento() {
     counterDisplay.textContent = valorAtual;
 }
 
-// Adiciona event listeners aos botões
+// Adiciona event listeners aos botões após o carregamento completo do DOM
 document.addEventListener("DOMContentLoaded", function() {
-    const incrementButton = document.getElementById("increment-button");
-    const decrementButton = document.getElementById("decrement-button");
+    const incrementButtons = document.querySelectorAll(".increment-button");
+    const decrementButtons = document.querySelectorAll(".decrement-button");
 
-    if (incrementButton) {
-        incrementButton.addEventListener("click", incrementar);
-    }
+    incrementButtons.forEach(function(button) {
+        button.addEventListener("click", incrementar);
+    });
 
-    if (decrementButton) {
-        decrementButton.addEventListener("click", decremento);
-    }
-
+    decrementButtons.forEach(function(button) {
+        button.addEventListener("click", decrementar);
+    });
 });
