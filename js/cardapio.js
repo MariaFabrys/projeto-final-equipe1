@@ -31,3 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", decrementar);
     });
 });
+
+
+
+
+
