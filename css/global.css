@@ -35,6 +35,7 @@ header {
 }
 
 .logo-header {
+    padding-top: 2%;
     margin-left: 3%;
     
     width: 10%;
@@ -51,7 +52,10 @@ header {
 .navbar a:hover {
     color: #7f6424;
 }
-
+#pao {
+    background: linear-gradient(0deg, rgb(222, 191, 115) 0%, rgba(193, 136, 63, 0.411) 100%);
+    padding: 1rem;
+}
 
 footer {
     width: 100%;
@@ -107,29 +111,34 @@ footer {
       position:fixed;
       bottom: 0;
     }
+    
+         #pao {
+             display: none;
+         }
 
     .icon-mobile {
         max-height: 40px;
         width: auto;
     }
+        .contato-icon { 
+           
+            max-height: 40px;
+            width: auto;
+           
+        }
 
     .logo-header {
         display: none;
     }
 
-    .navbar {
-        margin-top: 5%;
-        margin-right: 11%;
-    }
 
     .nav-mobile {
-        display: flex;
+            display: flex;
             flex-direction: row;
-            align-items: top;
             text-align: center;
     }
 
- 
+
 
     .a-icon-mobile{
     display: flex;

@@ -32,6 +32,18 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+      function verificarLargura() {
+        var paoSection = document.getElementById("pao");
+        if (window.innerWidth < 769) {
+          paoSection.style.display = "block";
+        } else {
+          paoSection.style.display = "none";
+        }
+      }
+
+      window.addEventListener("load", verificarLargura);
+      window.addEventListener("resize", verificarLargura);
+
 
 
 

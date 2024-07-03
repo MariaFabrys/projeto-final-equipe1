@@ -8,41 +8,13 @@
   padding: 0;
 }
 
-header{
-  margin:0;
-  padding:0;
+.icon-mobile {
+  margin-bottom: 20px;
+  /* Ajuste este valor conforme necessário */
 }
-header .nav-link {
-  display: flex;
-  align-items: center;
-}
-
-
-
-header .nav-item a {
-  display: flex;
-  flex-direction: column;
-
-}
-
-
-
-
-.contato-icon {
-  max-height: 40px;
-  width: auto;
-}
-
-
-
-
-#pao {
-  background: linear-gradient(0deg, rgb(222, 191, 115) 0%, rgba(193, 136, 63, 0.411) 100%);
-  padding: 1rem;
-}
-
-
-
+ .contato-icon {
+   margin-bottom: 20px;
+ }
 #Home img,
 .carousel-item img {
   max-height: 700px;
@@ -93,9 +65,7 @@ header .nav-item a {
   border-radius: 12px;
   background-color:#9b2f19 ;
 }
-.carrinho {
-  width: 17%;
-}
+
 
 #map-section {
   color: #191919;
@@ -109,9 +79,7 @@ header .nav-item a {
 }
 
 @media (max-width: 769px) {
-  #pao {
-      display: none;
-    }
+ 
   .sobrenos {
     flex-direction: column;
     align-items: center;
@@ -140,7 +108,7 @@ header .nav-item a {
   
   .nav-desktop{
     display: none !important;
-    /* Adicione !important para garantir que o estilo seja aplicado */
+    
   }
    
     }
