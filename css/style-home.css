@@ -7,34 +7,46 @@
   margin: 0;
   padding: 0;
 }
- .icon-mobile {
 
-   width: 10%;
-   margin-bottom: -6%;
- }
-
-#pao{
-      background: linear-gradient(0deg, rgb(222, 191, 115) 0%, rgba(193, 136, 63, 0.411) 100%);
-    padding: 1rem;
-   
+header{
+  margin:0;
+  padding:0;
 }
-@media (max-width: 769px) {
-  #pao {
-    display: none;
-  }
-}
-
-#Home {
-  background-color: #76960d;
+header .nav-link {
   display: flex;
-  box-sizing: border-box;
+  align-items: center;
 }
+
+
+
+header .nav-item a {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+
+
+.contato-icon {
+  max-height: 40px;
+  width: auto;
+}
+
+
+
+
+#pao {
+  background: linear-gradient(0deg, rgb(222, 191, 115) 0%, rgba(193, 136, 63, 0.411) 100%);
+  padding: 1rem;
+}
+
+
+
 #Home img,
 .carousel-item img {
-  max-width: 100%;
-  height: auto;
+  max-height: 700px;
 }
-
 
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.5);
@@ -42,7 +54,8 @@
   border-radius: 5px;
   font-size: large;
 }
-.card bg-warning{
+
+.card.bg-warning {
   background-color: #f5f5f5;
 }
 
@@ -51,21 +64,98 @@
   background-color: var(--clr-primary);
   color: var(--clr-white);
   padding: 2rem;
-  
+}
+
+.sobrenos {
+  display: flex;
+    flex-direction: row;
+  gap: 2rem;
+}
+
+.sobreleft {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+}
+
+.sobrenos img {
+  max-width: 400px;
+  max-height: 280px;
+  border-radius: 12px;
+}
+
+.sobreright {
+  flex: 1;
+  text-align:justify;
+}
+.card{
+  border-radius: 12px;
+  background-color:#9b2f19 ;
 }
 .carrinho {
   width: 17%;
 }
+
 #map-section {
-  
- color:#191919;
+  color: #191919;
   text-align: center;
+  
 }
-
-
 
 #map {
   height: 300px;
   border-radius: 4px;
+}
+
+@media (max-width: 769px) {
+  #pao {
+      display: none;
+    }
+  .sobrenos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobrenos img {
+    max-width: 100%;
+    
+    justify-content: center;
+  }
+
+  .sobreright {
+    text-align: justify;
+    padding-top: 1rem;
+  }
+    .sobreright h1 {
+      text-align: center;
+    }
+
+
+}
+
+
+
+@media (max-width: 769px) {
   
+  .nav-desktop{
+    display: none !important;
+    /* Adicione !important para garantir que o estilo seja aplicado */
+  }
+   
+    }
+    
+
+
+@media (min-width: 769px) {
+  .nav-mobile {
+    display: none !important;
+    /* Adicione !important para garantir que o estilo seja aplicado */
+  }
+    
+}
+.carrinho-icon {
+height: 40px;
+  width: auto;
+
 }

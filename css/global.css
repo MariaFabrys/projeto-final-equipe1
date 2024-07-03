@@ -6,24 +6,27 @@ body {
 }
 
 header {
-    
+    padding-bottom: 15px;
     background: rgb(234,173,16);
     background: linear-gradient(0deg, rgb(222, 191, 115) 0%, rgba(193, 136, 63, 0.411) 100%);
 
     
     display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        z-index: 9999;
+        
 }
 
 
-nav {
-   font-size:  25px; 
-   font-weight: 600;
+.navbar {
+    width: 100%;
+   font-size:  20px; 
+   font-weight: 500;
     list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center ;
   
    
     margin-top: 3%;
@@ -38,35 +41,32 @@ nav {
     height: 7%;
 }
 
-nav a {
+.navbar a {
     color: black;
     text-decoration: none;
     margin-left: 10%;
     font-weight: 500;
 }
 
-nav a:hover {
+.navbar a:hover {
     color: #7f6424;
 }
 
-.carrinho {
-    width: 80%;
-}
 
 footer {
     width: 100%;
-    height: auto;
+    height: fit-content;
    
     background: linear-gradient(0deg, rgba(193, 136, 63, 0.411) 0%, rgb(222, 191, 115) 100%);
     margin-top: auto;
 }
 
 .logo-pretoEbranco {
-    width: 4%;
+    width: 8%;
 }
 
 .redes-sociais {
-    width: 15%;
+    width: 18%;
     margin: auto;
     display: flex;
 }
@@ -75,11 +75,13 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 }
 
 .logo-byron-preta {
-    width: 15%;
-    height: 15%;
+    padding-bottom: 16px;
+    width: 20%;
+    height: 20%;
 }
 
 .desenvolvido-por {
@@ -96,62 +98,56 @@ footer {
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     header {
           background: linear-gradient(0deg, rgb(222, 191, 115) 0%, rgba(193, 136, 63, 0.411) 100%);
         width: 100%;
-        height: 8%;
+        height: fit-content;
         display: flex;
-        position: fixed;
-        bottom: 0;
+      position:fixed;
+      bottom: 0;
     }
 
     .icon-mobile {
-        width: 40%;
-        margin-bottom: -6%;
+        max-height: 40px;
+        width: auto;
     }
 
     .logo-header {
         display: none;
     }
 
-    nav {
+    .navbar {
         margin-top: 5%;
         margin-right: 11%;
     }
 
     .nav-mobile {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+            flex-direction: row;
+            align-items: top;
+            text-align: center;
     }
 
-    .carrinho-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+ 
+
+    .a-icon-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
     }
 
     .carrinho {
-        width: 60%;
-        margin-bottom: 5%;
+        max-height: 40px;
+            width: auto;
     }
-    .a-carrinho{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 2%;
+    
 
-    }
-
-    .texto-carrinho {
-        margin: 3%;
-    }
 
     footer {
         padding-bottom: 8%;
+        height: fit-content;
     }
 
     .logo-pretoEbranco {
@@ -171,9 +167,12 @@ footer {
     .nav-mobile {
         display: none;
     }
+    .carrinho{
+        width: 40px;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .nav-desktop {
         display: none;
     }
