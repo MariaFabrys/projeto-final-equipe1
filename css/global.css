@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #9B2F19;
+}
+
+header {
+    padding-bottom: 1%;
+    background: rgb(234,173,16);
+    background: linear-gradient(0deg, rgb(222, 191, 115) 0%, rgba(193, 136, 63, 0.411) 100%);
+    display: flex;
+    flex-direction: row;
+    z-index: 9999;
+        
+}
+
+
+.navbar {
+    width: 100%;
+   font-size:  20px; 
+   font-weight: 500;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center ;
+    margin-top: 3%;
+    padding: 0;
+}
+
+.logo-header {
+    padding-top: 2%;
+    margin-left: 3%;
+    width: 6%;
+    height: 7%;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #7f6424;
+}
+#pao {
+    background: linear-gradient(0deg, rgb(222, 191, 115) 0%, rgba(193, 136, 63, 0.411) 100%);
+    padding: 1rem;
+}
+
+footer {
+    width: 100%;
+    height: fit-content;
+    background: linear-gradient(0deg, rgba(193, 136, 63, 0.411) 0%, rgb(222, 191, 115) 100%);
+    margin-top: auto;
+}
+
+.logo-pretoEbranco {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 6%;
+}
+
+.redes-sociais {
+    width: 15%;
+    margin: auto;
+    display: flex;
+}
+
+.itens-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.logo-byron-preta {
+    padding-bottom: 16px;
+    width: 20%;
+    height: 20%;
+}
+
+.desenvolvido-por {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+ 
+}
+.direitos{
+    margin-top: 1%;
+}
+
+.desenvolvido-por p {
+    margin-right: 2%;
+    font-size: 80%;
+}
+
+/* Mobile */
+@media (max-width: 769px) {
+    header {
+          background: linear-gradient(0deg, rgb(222, 191, 115) 0%, rgba(193, 136, 63, 0.411) 100%);
+        width: 100%;
+        height: fit-content;
+        display: flex;
+      position:fixed;
+      bottom: 0;
+    }
+    
+         #pao {
+             display: none;
+         }
+
+    .icon-mobile {
+        max-height: 40px;
+        width: auto;
+    }
+        .contato-icon { 
+           
+            max-height: 40px;
+            width: auto;
+           
+        }
+
+    .logo-header {
+        display: none;
+    }
+
+
+    .nav-mobile {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+    }
+
+
+
+    .a-icon-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    }
+
+    .carrinho {
+        max-height: 40px;
+            width: auto;
+    }
+    
+
+
+    footer {
+        padding-bottom: 23%;
+        height: fit-content;
+    }
+
+    .logo-pretoEbranco {
+        width: 10%;
+    }
+
+    .redes-sociais {
+        width: 25%;
+    }
+
+    .logo-byron-preta {
+        width: 30%;
+    }
+    .direitos{
+        margin-left: 5%;
+    }
+    .desenvolvido-por{
+        font-size: larger;
+        font-weight: 700;
+    }
+    .rede-sociais-icon{
+        margin: 1%;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-mobile {
+        display: none;
+    }
+    .carrinho{
+        width: 40px;
+    }
+}
+
+@media (max-width: 769px) {
+    .nav-desktop {
+        display: none;
+    }
+}
+
+
+
+
