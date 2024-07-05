@@ -8,6 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
   
   let cart = [];
 
+  let cartItemCount = 0;
+
+function updateCartNotification() {
+  const notificationDot = document.querySelector('#cart-icon .notification-dot');
+  console.log(cartItemCount)
+    if (cartItemCount > 0) {
+        notificationDot.style.display = 'block';
+    } else {
+        notificationDot.style.display = 'none';
+    }
+}
+
   function updateCart() {
     cartItemsContainer.innerHTML = '';
     let total = 0;
@@ -27,25 +39,38 @@ document.addEventListener('DOMContentLoaded', () => {
       total += item.quantity * item.price;
     });
     cartTotal.innerText = `Total: R$ ${total.toFixed(2)}`;
+    // updateCartNotification()
+    
   }
 
+  //carrinho
   function addToCart(name, price) {
     const existingItem = cart.find(item => item.name === name);
     if (existingItem) {
       existingItem.quantity += 1;
     } else {
       cart.push({ name, price, quantity: 1 });
-    }
+    } 
+    cartItemCount++;
+    console.log(cartItemCount)
     updateCart();
+    updateCartNotification();
+
   }
 
+  //carrinho
   function removeFromCart(index) {
     if (cart[index].quantity > 1) {
       cart[index].quantity -= 1;
     } else {
       cart.splice(index, 1);
     }
+    if (cartItemCount > 0) {
+      cartItemCount--;
+    }
+    console.log(cartItemCount)
     updateCart();
+    updateCartNotification();
   }
 
   function updateCounter(name, increment) {
@@ -75,12 +100,16 @@ document.addEventListener('DOMContentLoaded', () => {
       if (parseInt(counter.innerText) > 0) {
         const existingItem = cart.find(item => item.name === name);
         if (existingItem) {
-          if (existingItem.quantity > 1) {
+          if (existingItem.quantity > 0) {
             existingItem.quantity -= 1;
+            cartItemCount--;
             updateCounter(name, -1);
+            updateCartNotification();
           } else {
             cart = cart.filter(item => item.name !== name);
+            
             updateCounter(name, -1);
+            
           }
         }
         updateCart();
@@ -92,11 +121,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const index = event.target.getAttribute('data-index');
     if (event.target.classList.contains('increment-btn')) {
       cart[index].quantity += 1;
+      cartItemCount++;
       updateCounter(cart[index].name, 1);
       updateCart();
     } else if (event.target.classList.contains('decrement-btn')) {
       updateCounter(cart[index].name, -1);
       removeFromCart(index);
+      updateCart();
+
     }
   });
 
@@ -116,25 +148,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-let cartItemCount = 0;
 
-function updateCartNotification() {
-    const notificationDot = document.querySelector('#cart-icon .notification-dot');
-    if (cartItemCount > 0) {
-        notificationDot.style.display = 'block';
-    } else {
-        notificationDot.style.display = 'none';
-    }
-}
 
-function addToCart() {
-    cartItemCount++;
-    updateCartNotification();
-}
+// function addToCart() {
+//     cartItemCount++;
+//     updateCartNotification();
+// }
 
-function removeFromCart() {
-    if (cartItemCount > 0) {
-        cartItemCount--;
-        updateCartNotification();
-    }
-}
+// function removeFromCart() {
+    
+// }
