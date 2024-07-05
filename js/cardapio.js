@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const price = parseFloat(item.querySelector('.info-lanches p:last-child').innerText.replace('R$', '').replace(',', '.'));
       addToCart(name, price);
       updateCounter(name, 1);
+      return price;
     });
   });
 
@@ -114,3 +115,26 @@ document.addEventListener('DOMContentLoaded', () => {
     cartPopup.classList.remove('active');
   });
 });
+
+let cartItemCount = 0;
+
+function updateCartNotification() {
+    const notificationDot = document.querySelector('#cart-icon .notification-dot');
+    if (cartItemCount > 0) {
+        notificationDot.style.display = 'block';
+    } else {
+        notificationDot.style.display = 'none';
+    }
+}
+
+function addToCart() {
+    cartItemCount++;
+    updateCartNotification();
+}
+
+function removeFromCart() {
+    if (cartItemCount > 0) {
+        cartItemCount--;
+        updateCartNotification();
+    }
+}

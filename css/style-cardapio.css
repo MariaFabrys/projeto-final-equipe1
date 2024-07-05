@@ -1,9 +1,9 @@
 
-.carrinho-icon {
+/* .carrinho-icon {
     height: 40px;
     width: auto;
 
-}
+} */
     
     body {
     background-color: #9B2F19;
@@ -82,6 +82,19 @@
 @media (min-width: 769px) {
     .cards-itens {
         width: 23%; 
+    }
+}
+@media (max-width: 769px) {
+    #navbar{
+        display: flex;
+        justify-content: start;
+    }
+    .navbar a{
+        margin-left: 10%;
+
+    }
+    .logo-byron-preta {
+        margin-top: 3%;
     }
 }
 /*Js counter*/
@@ -211,3 +224,18 @@
 .overlay.active {
     display: block;
 }
+.notification-dot {
+    position: absolute;
+    top: -5px;
+    right: -7px;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(209, 56, 56);
+    border-radius: 50%;
+    display: none; /* Inicialmente escondido */
+  }
+  
+  #cart-icon {
+    position: relative;
+  }
+  

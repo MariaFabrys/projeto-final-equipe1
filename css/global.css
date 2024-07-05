@@ -6,14 +6,12 @@ body {
 }
 
 header {
-    padding-bottom: 15px;
+    padding-bottom: 1%;
     background: rgb(234,173,16);
     background: linear-gradient(0deg, rgb(222, 191, 115) 0%, rgba(193, 136, 63, 0.411) 100%);
-
-    
     display: flex;
-        flex-direction: row;
-        z-index: 9999;
+    flex-direction: row;
+    z-index: 9999;
         
 }
 
@@ -27,25 +25,20 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center ;
-  
-   
     margin-top: 3%;
-    
-
+    padding: 0;
 }
 
 .logo-header {
     padding-top: 2%;
     margin-left: 3%;
-    
-    width: 10%;
+    width: 6%;
     height: 7%;
 }
 
 .navbar a {
     color: black;
     text-decoration: none;
-    margin-left: 10%;
     font-weight: 500;
 }
 
@@ -60,17 +53,18 @@ header {
 footer {
     width: 100%;
     height: fit-content;
-   
     background: linear-gradient(0deg, rgba(193, 136, 63, 0.411) 0%, rgb(222, 191, 115) 100%);
     margin-top: auto;
 }
 
 .logo-pretoEbranco {
-    width: 8%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 6%;
 }
 
 .redes-sociais {
-    width: 18%;
+    width: 15%;
     margin: auto;
     display: flex;
 }
@@ -94,6 +88,9 @@ footer {
     align-items: center;
     justify-content: center;
  
+}
+.direitos{
+    margin-top: 1%;
 }
 
 .desenvolvido-por p {
@@ -155,7 +152,7 @@ footer {
 
 
     footer {
-        padding-bottom: 8%;
+        padding-bottom: 23%;
         height: fit-content;
     }
 
@@ -164,11 +161,21 @@ footer {
     }
 
     .redes-sociais {
-        width: 20%;
+        width: 25%;
     }
 
     .logo-byron-preta {
-        width: 20%;
+        width: 30%;
+    }
+    .direitos{
+        margin-left: 5%;
+    }
+    .desenvolvido-por{
+        font-size: larger;
+        font-weight: 700;
+    }
+    .rede-sociais-icon{
+        margin: 1%;
     }
 }
 
@@ -186,3 +193,7 @@ footer {
         display: none;
     }
 }
+
+
+
+

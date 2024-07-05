@@ -15,10 +15,10 @@
         alt="logo"
         class="logo-header"
       />
-      <div class="navbar">
+      <div class="navbar" id="navbar">
         <a href="index.html" class="nav-desktop">Home</a>
 
-        <a href="index.html" class="nav-mobile a-icon-mobile">
+        <a href="index.html" class="nav-mobile a-icon-mobile icon-home">
           <img
             src="img/home-mobile.png"
             alt="icon-home-mobile"
@@ -51,6 +51,7 @@
             alt="carrinho"
             class="carrinho"
           />
+          <div class="notification-dot"></div>
           <p class="nav-mobile texto-carrinho">Carrinho</p>
         </a>
       </div>
@@ -81,9 +82,9 @@
             <p>R$ 24,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
           </div>
         </div>
 
@@ -97,9 +98,9 @@
             <p>R$ 22,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
           </div>
         </div>
 
@@ -113,9 +114,9 @@
             <p>R$ 23,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
           </div>
         </div>
 
@@ -129,9 +130,9 @@
             <p>R$ 27,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
           </div>
         </div>
 
@@ -145,9 +146,9 @@
             <p>R$ 22,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
           </div>
         </div>
 
@@ -162,9 +163,9 @@
             <p>R$ 26,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
           </div>
         </div>
 
@@ -178,9 +179,9 @@
             <p>R$ 19,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
           </div>
         </div>
 
@@ -194,9 +195,9 @@
             <p>R$ 15,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
           </div>
         </div>
       </article>
@@ -215,9 +216,9 @@
             <p>R$ 5,00</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
           </div>
         </div>
         <div class="cards-itens">
@@ -230,9 +231,9 @@
             <p>R$ 5,00</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
           </div>
         </div>
         <div class="cards-itens">
@@ -245,9 +246,9 @@
             <p>R$ 5,00</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
           </div>
         </div>
         <div class="cards-itens">
@@ -260,9 +261,9 @@
             <p>R$ 8,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
           </div>
         </div>
         <div class="cards-itens">
@@ -275,9 +276,9 @@
             <p>R$ 8,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
           </div>
         </div>
         <div class="cards-itens">
@@ -290,9 +291,9 @@
             <p>R$ 16,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
           </div>
         </div>
         <div class="cards-itens">
@@ -305,9 +306,9 @@
             <p>R$ 16,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
           </div>
         </div>
         <div class="cards-itens">
@@ -320,9 +321,9 @@
             <p>R$ 15,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
           </div>
         </div>
       </article>
@@ -341,9 +342,9 @@
             <p>R$ 6,29</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
           </div>
         </div>
         <div class="cards-itens">
@@ -356,9 +357,9 @@
             <p>R$ 11,60</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
           </div>
         </div>
         <div class="cards-itens">
@@ -371,9 +372,9 @@
             <p>R$ 11,60</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
           </div>
         </div>
         <div class="cards-itens">
@@ -386,9 +387,9 @@
             <p>R$ 11,60</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
           </div>
         </div>
         <div class="cards-itens">
@@ -401,9 +402,9 @@
             <p>R$ 3,29</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
           </div>
         </div>
         <div class="cards-itens">
@@ -413,9 +414,9 @@
             <p>R$ 8,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
           </div>
         </div>
         <div class="cards-itens">
@@ -425,9 +426,9 @@
             <p>R$ 8,90</p>
           </div>
           <div class="counter-container">
-            <button class="counter-button decrement-button">-</button>
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
             <div class="counter">0</div>
-            <button class="counter-button increment-button">+</button>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
           </div>
         </div>
       </article>
