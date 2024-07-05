@@ -1,363 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style-cardapio.css">
-    <link rel="stylesheet" href="css/global.css">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style-cardapio.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <title>Cardapio</title>
+  </head>
+  <body>
     <header>
-        <img src="./img/WhatsApp_Image_2024-06-22_at_13.53.43-removebg-preview.png" alt="logo" class="logo-header">
-        <nav class="navbar">
-            <a href="index.html" class="nav-desktop">Home</a>
+      <img
+        src="./img/WhatsApp_Image_2024-06-22_at_13.53.43-removebg-preview.png"
+        alt="logo"
+        class="logo-header"
+      />
+      <div class="navbar" id="navbar">
+        <a href="index.html" class="nav-desktop">Home</a>
 
-            <a href="index.html" class="nav-mobile">
-                <img src="img/home-mobile.png" alt="icon-home-mobile" class="icon-mobile home-icon">
-                <p>Home</p>
-            </a>
+        <a href="index.html" class="nav-mobile a-icon-mobile icon-home">
+          <img
+            src="img/home-mobile.png"
+            alt="icon-home-mobile"
+            class="icon-mobile home-icon"/>
+          <p>Home</p>
+        </a>
 
-            <a href="cardapio.html" class="nav-desktop">Cardápio</a>
+        <a href="cardapio.html" class="nav-desktop">Cardápio</a>
 
-            <a href="cardapio.html" class="nav-mobile">
-                <img src="/img/burguer-mobile.png" alt="hamburguer" class="icon-mobile cardapio-icon">
-                <p>Cardápio</p>
-            </a>
-            <a href="#footer" class="nav-desktop">Contatos</a>
-            <a href="#footer" class="nav-mobile">
-                <img src="img/phone-call-mobile.png" alt="contato" class="icon-mobile contato-icon">
-                <p>Contatos</p>
-            </a>
-            <a href="#" class="a-carrinho">
-                <img src="./img/cart-shopping-solid (1).svg" alt="carrinho" class="carrinho">
-                <p class="nav-mobile texto-carrinho">Carrinho</p>
-            </a>
-        </nav>
+        <a href="cardapio.html" class="nav-mobile a-icon-mobile">
+          <img
+            src="/img/burguer-mobile.png"
+            alt="hamburguer"
+            class="icon-mobile cardapio-icon"
+          />
+          <p>Cardápio</p>
+        </a>
+        <a href="#footer" class="nav-desktop">Contatos</a>
+        <a href="#footer" class="nav-mobile a-icon-mobile">
+          <img
+            src="img/phone-call-mobile.png"
+            alt="contato"
+            class="icon-mobile contato-icon"
+          />
+          <p>Contatos</p>
+        </a>
+        <a href="#" class="a-icon-mobile" id="cart-icon">
+          <img
+            src="./img/cart-shopping-solid (1).svg"
+            alt="carrinho"
+            class="carrinho"
+          />
+          <div class="notification-dot"></div>
+          <p class="nav-mobile texto-carrinho">Carrinho</p>
+        </a>
+      </div>
     </header>
-    
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="cart-popup" id="cart-popup">
+      <div class="close-btn"><button id="close-cart">&times;</button></div>
+      <h2>Seu Carrinho</h2>
+      <ul class="cart-items" id="cart-items"></ul>
+      <div class="total" id="cart-total">Total: R$ 0,00</div>
+    </div>
+
     <section id="cardapio">
-        <article class="titulo-pagina">
-            <h1>Cardápio</h1>
-            <h2>Lanches:</h2>
-        </article>
-        <article class="lista-itens">
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/whopper-thumb.png?mtime=20210916125149&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Big Bite Supreme</p>
-                    <p>R$ 24,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-    
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/cheeseburger-thumb.png?mtime=20210916134524&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>BBQ Beef Bonanza</p>
-                    <p>R$ 22,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
+      <article class="titulo-pagina">
+        <h1>Cardápio</h1>
+        <h2>Lanches:</h2>
+      </article>
+      <article class="lista-itens">
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/whopper-thumb.png?mtime=20210916125149&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Big Bite Supreme</p>
+            <p>R$ 24,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
+          </div>
+        </div>
 
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/whopper-bbq-bacon-thumb_2021-09-16-133011_rnpl.png?mtime=20210916133012&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Cheesy Jalapeño Joy</p>
-                    <p>R$ 23,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/cheeseburger-thumb.png?mtime=20210916134524&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>BBQ Beef Bonanza</p>
+            <p>R$ 22,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
+          </div>
+        </div>
 
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/big-king-thumb.png?mtime=20210916134350&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Spicy Sriracha Sensation</p>
-                    <p>R$ 27,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/whopper-bbq-bacon-thumb_2021-09-16-133011_rnpl.png?mtime=20210916133012&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Cheesy Jalapeño Joy</p>
+            <p>R$ 23,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
+          </div>
+        </div>
 
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/chicken-duplo-thumb.png?mtime=20210916143308&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Crispy Chicken Delight</p>
-                    <p>R$ 22,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/big-king-thumb.png?mtime=20210916134350&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Spicy Sriracha Sensation</p>
+            <p>R$ 27,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
+          </div>
+        </div>
 
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/maga-stacker-2-thumb.png?mtime=20210916133150&focal=none
-                " alt="">
-                <div class="info-lanches">
-                    <p>Gourmet Bacon Bliss</p>
-                    <p>R$ 26,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/chicken-duplo-thumb.png?mtime=20210916143308&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Crispy Chicken Delight</p>
+            <p>R$ 22,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
+          </div>
+        </div>
 
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/whopper-de-plantas-thumb.png?mtime=20210916144441&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Veggie Lover's Paradise</p>
-                    <p>R$ 19,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/maga-stacker-2-thumb.png?mtime=20210916133150&focal=none
+                "
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Gourmet Bacon Bliss</p>
+            <p>R$ 26,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
+          </div>
+        </div>
 
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/kids-burger-thumb.png?mtime=20210916101534&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>cheeseburguer kids</p>
-                    <p>R$ 15,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-        </article>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/whopper-de-plantas-thumb.png?mtime=20210916144441&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Veggie Lover's Paradise</p>
+            <p>R$ 19,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
+          </div>
+        </div>
 
-        <article class="titulo-pagina">
-            <h2>Sobremesas:</h2>
-        </article>
-        <article class="lista-itens">
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Casquinha-Baunilha-thumb.png?mtime=20210916162214&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Casquinha de Baunilha</p>
-                    <p>R$ 5,00</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Casquinha-Mista-thumb.png?mtime=20210916162351&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Casquinha Mista</p>
-                    <p>R$ 5,00</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Casquinha-Doce-de-Leite-thumb.png?mtime=20210916162028&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Casquinha de Chocolate </p>
-                    <p>R$ 5,00</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Sundae-Chocolate-thumb.png?mtime=20210916155926&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Sundae de Chocolate</p>
-                    <p>R$ 8,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Sundae-Morango-thumb.png?mtime=20210916160333&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Sundae de Morango</p>
-                    <p>R$ 8,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Nova-Embalagem_Shake-Chocolate_Externa.png?mtime=20240604104016&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Shake de Chocolate</p>
-                    <p>R$ 16,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Nova-Embalagem_Shake-Morango_Externa.png?mtime=20240604104134&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Shake de Morango</p>
-                    <p>R$ 16,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/BK-Mix-Ovomaltine-thumb.png?mtime=20210916160844&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Mix de Ovomaltine</p>
-                    <p>R$ 15,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-        </article>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/kids-burger-thumb.png?mtime=20210916101534&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>cheeseburguer kids</p>
+            <p>R$ 15,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
+          </div>
+        </div>
+      </article>
 
-        <article class="titulo-pagina">
-            <h2>Bebidas:</h2>
-        </article>
-        <article class="lista-itens">
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/H2O_limao_thumb_639x324-100k.png?mtime=20201222080044&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>H20H! Limão</p>
-                    <p>R$ 6,29</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Natural_One_Laranja_thumb_639x324.png?mtime=20210118103439&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Natural One Laranja</p>
-                    <p>R$ 11,60</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Natural_One_Uva_thumb_639x324.png?mtime=20210119185115&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Natural One Uva</p>
-                    <p>R$ 11,60</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-            <div class="cards-itens">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/natural-one-maracuja-thumb_2021-02-24-143713.png?mtime=20210224113714&focal=none" alt="">
-                <div class="info-lanches">
-                    <p>Natural One Maracujá</p>
-                    <p>R$ 11,60</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-            <div class="cards-itens">
-                <img src="https://www.subway.com/ns/images/menu/BRA/POR/menu-category-sides-drinks-extras-water-BR-308x140.jpg" alt="">
-                <div class="info-lanches">
-                    <p>Água</p>
-                    <p>R$ 3,29</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-            <div class="cards-itens">
-                <img src="img/Pepsi-Twist-thumb.png" alt="">
-                <div class="info-lanches">
-                    <p>Pepsi Twist</p>
-                    <p>R$ 8,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-            <div class="cards-itens">
-                <img src="img/Guarana-thumb_2021-09-20-103342_wuyd.png" alt="">
-                <div class="info-lanches">
-                    <p>Guaraná Antarctica</p>
-                    <p>R$ 8,90</p>
-                </div>
-                <div class="counter-container">
-                    <button class="counter-button decrement-button">-</button>
-                    <div class="counter">0</div>
-                    <button class="counter-button increment-button">+</button>
-                </div>
-            </div>
-        </article>
+      <article class="titulo-pagina">
+        <h2>Sobremesas:</h2>
+      </article>
+      <article class="lista-itens">
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/Casquinha-Baunilha-thumb.png?mtime=20210916162214&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Casquinha de Baunilha</p>
+            <p>R$ 5,00</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
+          </div>
+        </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/Casquinha-Mista-thumb.png?mtime=20210916162351&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Casquinha Mista</p>
+            <p>R$ 5,00</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
+          </div>
+        </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/Casquinha-Doce-de-Leite-thumb.png?mtime=20210916162028&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Casquinha de Chocolate</p>
+            <p>R$ 5,00</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
+          </div>
+        </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/Sundae-Chocolate-thumb.png?mtime=20210916155926&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Sundae de Chocolate</p>
+            <p>R$ 8,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
+          </div>
+        </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/Sundae-Morango-thumb.png?mtime=20210916160333&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Sundae de Morango</p>
+            <p>R$ 8,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
+          </div>
+        </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/Nova-Embalagem_Shake-Chocolate_Externa.png?mtime=20240604104016&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Shake de Chocolate</p>
+            <p>R$ 16,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
+          </div>
+        </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/Nova-Embalagem_Shake-Morango_Externa.png?mtime=20240604104134&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Shake de Morango</p>
+            <p>R$ 16,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button" onclick="addToCart()">+</button>
+          </div>
+        </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/BK-Mix-Ovomaltine-thumb.png?mtime=20210916160844&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Mix de Ovomaltine</p>
+            <p>R$ 15,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
+          </div>
+        </div>
+      </article>
 
+      <article class="titulo-pagina">
+        <h2>Bebidas:</h2>
+      </article>
+      <article class="lista-itens">
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/H2O_limao_thumb_639x324-100k.png?mtime=20201222080044&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>H20H! Limão</p>
+            <p>R$ 6,29</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
+          </div>
+        </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/Natural_One_Laranja_thumb_639x324.png?mtime=20210118103439&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Natural One Laranja</p>
+            <p>R$ 11,60</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
+          </div>
+        </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/Natural_One_Uva_thumb_639x324.png?mtime=20210119185115&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Natural One Uva</p>
+            <p>R$ 11,60</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
+          </div>
+        </div>
+        <div class="cards-itens">
+          <img
+            src="https://d3sn2rlrwxy0ce.cloudfront.net/natural-one-maracuja-thumb_2021-02-24-143713.png?mtime=20210224113714&focal=none"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Natural One Maracujá</p>
+            <p>R$ 11,60</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
+          </div>
+        </div>
+        <div class="cards-itens">
+          <img
+            src="https://www.subway.com/ns/images/menu/BRA/POR/menu-category-sides-drinks-extras-water-BR-308x140.jpg"
+            alt=""
+          />
+          <div class="info-lanches">
+            <p>Água</p>
+            <p>R$ 3,29</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
+          </div>
+        </div>
+        <div class="cards-itens">
+          <img src="img/Pepsi-Twist-thumb.png" alt="" />
+          <div class="info-lanches">
+            <p>Pepsi Twist</p>
+            <p>R$ 8,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
+          </div>
+        </div>
+        <div class="cards-itens">
+          <img src="img/Guarana-thumb_2021-09-20-103342_wuyd.png" alt="" />
+          <div class="info-lanches">
+            <p>Guaraná Antarctica</p>
+            <p>R$ 8,90</p>
+          </div>
+          <div class="counter-container">
+            <button class="counter-button decrement-button" onclick="removeFromCart()">-</button>
+            <div class="counter">0</div>
+            <button class="counter-button increment-button"  onclick="addToCart()">+</button>
+          </div>
+        </div>
+      </article>
     </section>
 
     <footer id="footer">
-        <div class="itens-footer">
-            <img src="img/big_bite_bw-removebg-preview.png" alt="logo-pretoEbranco" class="logo-pretoEbranco">
-            <div class="redes-sociais">
-                <img src="img/instagram (1).svg" alt="instagram" class="redes-sociais instagram">
-                <img src="img/facebook (1).svg" alt="facebook" class="redes-sociais facebook">
-                <img src="img/x-twitter.svg" alt="x-twitter" class="redes-sociais twitter">
-            </div>
-            <p>TM & © 2024 Big Bite Burguer Corporation. Todos os direitos reservados.</p>
-            <div class="desenvolvido-por">
-                <p>Desenvolvido por:</p>
-                <img src="img/logo-byron-preta (1).png" alt="logo-byron" class="logo-byron-preta">
-            </div>
+      <div class="itens-footer">
+        <img
+          src="img/big_bite_bw-removebg-preview.png"
+          alt="logo-pretoEbranco"
+          class="logo-pretoEbranco"
+        />
+        <div class="redes-sociais">
+          <a
+            href="https://www.instagram.com/byron.solutions/"
+            class="redes-sociais instagram"
+          >
+            <img src="img/instagram (1).svg" alt="instagram"
+          /></a>
+          <a href="https://facebook.com" class="redes-sociais facebook">
+            <img src="img/facebook (1).svg" alt="facebook"
+          /></a>
+          <a href="https://x.com" class="redes-sociais twitter">
+            <img src="img/x-twitter.svg" alt="x-twitter"
+          /></a>
         </div>
+        <p>
+          TM & © 2024 Big Bite Burguer Corporation. Todos os direitos
+          reservados.
+        </p>
+        <div class="desenvolvido-por">
+          <p>Desenvolvido por:</p>
+          <img
+            src="img/logo-byron-preta (1).png"
+            alt="logo-byron"
+            class="logo-byron-preta"
+          />
+        </div>
+      </div>
     </footer>
     <script src="./js/cardapio.js"></script>
-</body>
+  </body>
 </html>
